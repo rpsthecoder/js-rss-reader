@@ -10,7 +10,7 @@ document.querySelector('button').addEventListener('click', getFeed)
 		var url = new URL(IP.value)
 	}
 	catch(e){console.error('URL invalid'); return}
-	fetch(url, {mode: 'cors'}).then((res) => {
+	fetch(url).then((res) => {
 		console.info('Website fetch successful')
 		res.text().then((htmlTxt) => {
 			/* Extract the RSS Feed URL from the website */
