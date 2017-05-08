@@ -10,12 +10,11 @@ document.querySelector('button').addEventListener('click', getFeed)
 		var url = new URL(IP.value)
 	}
 	catch(e){console.error('URL invalid'); return}
-	fetch(url, {mode: 'no-cors'}).then((res) => {
+	fetch(url, {mode: 'cors'}).then((res) => {
 		console.info('Website fetch successful')
 		res.text().then((htmlTxt) => {
 			/* Extract the RSS Feed URL from the website */
 			try {
-				console.log(htmlTxt)
 				let doc = DOMPARSER(htmlTxt, 'text/html')
 				var	feedUrl = doc.querySelector('link[type="application/rss+xml"]').href
 			} catch(e) {console.error('Error in parsing the website');  return}
