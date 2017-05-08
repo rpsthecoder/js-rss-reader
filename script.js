@@ -15,6 +15,7 @@ document.querySelector('button').addEventListener('click', getFeed)
 		res.text().then((htmlTxt) => {
 			/* Extract the RSS Feed URL from the website */
 			try {
+				console.log(htmlTxt)
 				let doc = DOMPARSER(htmlTxt, 'text/html')
 				var	feedUrl = doc.querySelector('link[type="application/rss+xml"]').href
 			} catch(e) {console.error('Error in parsing the website');  return}
