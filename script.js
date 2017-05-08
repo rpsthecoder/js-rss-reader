@@ -3,7 +3,7 @@ const DOMPARSER = new DOMParser().parseFromString.bind(new DOMParser())
 fetch('urls.json').then((res) => {
     res.text().then((data) => {
         var frag = document.createDocumentFragment()
-		var hasBegun = true
+	var hasBegun = true
         JSON.parse(data).urls.forEach((u) => {
             try {
                 var url = new URL(u)
