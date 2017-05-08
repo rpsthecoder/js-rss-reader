@@ -1,0 +1,45 @@
+@font-face{
+	font-family: 'Crimson Text';
+	src: url('CrimsonText.ttf');
+}
+html,
+button,
+input	{
+	font-family: 'Crimson Text', serif;
+	font-size: 13pt;
+}
+body{
+	width: 60%;
+	margin: auto;
+}
+input{
+	width: 50%;
+}
+h2{
+	color: orangered;
+	margin-bottom: 0;
+}
+a:link{
+	color: dodgerblue;
+}
+h2+a:link{
+	font-weight: bold;
+}
+p{
+	background-color: lavenderblush;
+	padding: 5px;
+}
+button{
+	border: none;
+	background: linear-gradient(45deg, deeppink, orangered);
+	box-shadow: 0 0 2px hsl(240, 25%, 80%);
+	color: white;
+}
+input::placeholder{
+	font-style: italic;
+}
+input{
+	border:none;
+	outline: none;
+	border-bottom: 1px dotted darkslategrey;
+}
